@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice Card</title>
+  <link rel="stylesheet" href="indes.css">
+</head>
+<body>
+  <div class="card">
+    <div class="advice-number">ADVICE <div class="no"></div></div>
+    <div class="quote">
+    </div>
+    <img src="images/pattern-divider-mobile.svg" alt="">
+    <button class="dice-button">
+      <img src="images/icon-dice.svg" alt="">
+    </button>
+  </div>
+  <script>
+
+    
+
+    async function generateAdvice(){
+
+      try{
+        const response = await fetch("https://api.adviceslip.com/advice")
+        const data = await response.json();
+        console.log(response)
+        document.querySelector(".quote").textContent = `${data.slip.advice}`
+        document.querySelector(".no").textContent = data.slip.id
+      }
+      catch(e){
+        console.error(e)
+        document.querySelector(".quote").textContent = "Sorry, unable to load advice!";
+      }
+    }
+    document.querySelector(".dice-button").addEventListener("click",  generateAdvice())
+  </script>
+  
+</body>
+</html>

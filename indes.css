@@ -1,0 +1,62 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: hsl(217, 19%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background-color: hsl(217, 19%, 38%) ;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  
+
+  .advice-number{
+    color: #10b981;
+    font-size: 1em;
+    font-weight: 800;
+  }
+  
+  .quote {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .dice-button {
+    height: 50px;
+    width: 50px;
+    background: #10b981;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dice-button:active {
+    /* Neon glow on hover */
+    box-shadow: 0 0 20px #0ef, 0 0 40px #0ef, 0 0 60px #0ef;
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
